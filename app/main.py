@@ -1,8 +1,8 @@
 import bottle
 import json
-import routing
+#import routing
 
-smart = brains()
+#smart = brains()
 
 @bottle.get('/')
 def index():
@@ -16,7 +16,7 @@ def index():
 @bottle.post('/start')
 def start():
     data = bottle.request.json
-    smart.start(data)
+    #smart.start(data)
 	
     return json.dumps({
         'name': 'battlesnake-python',
@@ -30,7 +30,10 @@ def start():
 def move():
     data = bottle.request.json
     
-    return smart.move()
+    return return json.dumps({
+        	'move': 'right',
+        	'taunt': 'battlesnake-python!'
+    	})
 
 
 @bottle.post('/end')
