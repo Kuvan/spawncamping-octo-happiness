@@ -3,9 +3,9 @@ import json
 class brains:
 	def start(self, data):
 		self.mInfo = json.load[data]
-		self.mWidth = self.info["width"]
-		self.mHeight = self.info["height"]
-		self.mGameID = self.info["game_id"]
+		self.mWidth = self.mInfo["width"]
+		self.mHeight = self.mInfo["height"]
+		self.mGameID = self.mInfo["game_id"]
 		#print(self.mGameID)
 		self.Board[self.mWidth,self.mHeight]
 		
