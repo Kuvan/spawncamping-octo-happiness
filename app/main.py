@@ -2,7 +2,7 @@ import bottle
 import json
 import routing
 
-smart = brains
+smart = brains()
 
 @bottle.get('/')
 def index():
@@ -30,7 +30,7 @@ def start():
 def move():
     data = bottle.request.json
     
-    return smart.move
+    return smart.move()
 
 
 @bottle.post('/end')
