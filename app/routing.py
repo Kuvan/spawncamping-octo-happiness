@@ -6,7 +6,7 @@ class brains:
 		self.mWidth = self.info["width"]
 		self.mHeight = self.info["height"]
 		self.mGameID = self.info["game_id"]
-		print(self.mGameID)
+		#print(self.mGameID)
 		self.Board[self.mWidth,self.mHeight]
 		
 	def move(self):
