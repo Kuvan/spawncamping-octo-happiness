@@ -5,7 +5,7 @@ import json
 @bottle.get('/')
 def index():
     return """
-        <a href="https://github.com/sendwithus/battlesnake-python">
+        <a href="https://github.com/Kuvan/spawncamping-octo-happiness">
             battlesnake-python
         </a>
     """
@@ -28,7 +28,7 @@ def move():
     data = bottle.request.json
 
     return json.dumps({
-        'move': 'left',
+        'move': 'up',
         'taunt': 'battlesnake-python!'
     })
 
