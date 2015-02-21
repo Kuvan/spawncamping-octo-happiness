@@ -9,10 +9,9 @@ class brains:
 		print(self.mGameID)
 		self.Board[self.mWidth,self.mHeight]
 		
-	def move:
+	def move(self):
 		return json.dumps({
         	'move': 'right',
         	'taunt': 'battlesnake-python!'
     	})
-	
 	
