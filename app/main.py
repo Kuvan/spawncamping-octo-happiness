@@ -1,11 +1,13 @@
 import bottle
 import json
+import routing
 
+smart = brains
 
 @bottle.get('/')
 def index():
     return """
-        <a href="https://github.com/Kuvan/spawncamping-octo-happiness">
+        <a href="https://github.com/sendwithus/battlesnake-python">
             battlesnake-python
         </a>
     """
@@ -14,9 +16,10 @@ def index():
 @bottle.post('/start')
 def start():
     data = bottle.request.json
-
+    smart.start(data)
+	
     return json.dumps({
-        'name': 'Mesocricetu',
+        'name': 'battlesnake-python',
         'color': '#00ff00',
         'head_url': 'http://battlesnake-python.herokuapp.com',
         'taunt': 'battlesnake-python!'
@@ -26,17 +29,14 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-
-    return json.dumps({
-        'move': 'up',
-        'taunt': 'battlesnake-python!'
-    })
+    
+    return smart.move
 
 
 @bottle.post('/end')
 def end():
     data = bottle.request.json
-
+	
     return json.dumps({})
 
 
